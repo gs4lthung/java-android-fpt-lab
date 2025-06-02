@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6200ee"
+        android:paddingVertical="16dp"
+        android:paddingLeft="12dp"
+        android:text="My Application1"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Sign In Form"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/username_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+        <Button
+            android:id="@+id/signin_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Sign In" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notAccountYet_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Account Yet ? Create one" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="-----Or-----" />
+
+        <Button
+            android:id="@+id/signup_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Sign Up" />
+
+    </LinearLayout>
+
+</LinearLayout>
