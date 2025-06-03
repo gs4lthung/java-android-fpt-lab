@@ -2,7 +2,9 @@ package com.example.lab4;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,5 +30,14 @@ public class MainActivity extends AppCompatActivity {
             // Start the FoodOrderActivity when the button is clicked
             startActivity(new Intent(MainActivity.this, FoodOrderActivity.class));
         });
+
+        String foodText = getIntent().getStringExtra("food_text");
+        TextView foodTextView = findViewById(R.id.food_text);
+        if (foodText != null) {
+            foodTextView.setText(foodText);
+            foodTextView.setVisibility(View.VISIBLE);
+        } else {
+            foodTextView.setVisibility(View.GONE);
+        }
     }
 }

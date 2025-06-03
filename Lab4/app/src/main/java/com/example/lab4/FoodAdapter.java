@@ -1,6 +1,9 @@
 package com.example.lab4;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -60,6 +64,16 @@ public class FoodAdapter extends BaseAdapter {
         foodRating.setText("⭐" + " " + foodModel.getStar());
         foodIsBestSeller.setVisibility(foodModel.isBestseller() ? View.VISIBLE : View.GONE);
         foodImage.setImageResource(foodModel.getImageResourceId());
+
+        Button addToCartButton = convertView.findViewById(R.id.food_add_to_cart);
+        TextView foodText = convertView.findViewById(R.id.food_text);
+        addToCartButton.setOnClickListener(v -> {
+            // Handle the button click event
+            Toast.makeText(context, foodModel.getName() + " added to cart", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(context, MainActivity.class);
+            intent.putExtra("food_text", foodModel.getName());
+            context.startActivity(intent);
+        });
 
         return convertView;
     }

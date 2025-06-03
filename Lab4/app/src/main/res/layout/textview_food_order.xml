@@ -103,7 +103,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:backgroundTint="#000000"
-                android:clickable="false"
                 android:minWidth="0dp"
                 android:minHeight="0dp"
                 android:paddingHorizontal="12dp"

@@ -54,12 +54,35 @@
         android:text="EXIT"
         android:textSize="16sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="60dp"
-        android:text="Developed by Your Name"
-        android:textColor="#4e8752"
-        android:textSize="24sp" />
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/food_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="-"
+            android:textSize="50sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/drink_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cocacola"
+            android:textSize="24sp"
+            android:visibility="gone" />
+    </LinearLayout>
 </LinearLayout>
