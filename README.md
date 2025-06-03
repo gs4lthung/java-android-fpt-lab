@@ -1,1 +1,1 @@
-# java-android-fpt-lab
+# Lab for Java Android (PRM392)
