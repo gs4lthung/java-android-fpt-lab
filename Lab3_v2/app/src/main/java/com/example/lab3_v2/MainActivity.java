@@ -2,6 +2,7 @@ package com.example.lab3_v2;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -21,12 +22,22 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         listView = findViewById(R.id.device_listview);
-        CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), devices);
+        CustomAdapter customAdapter = new CustomAdapter(this, devices);
         listView.setAdapter(customAdapter);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        Button addButton = findViewById(R.id.add_btn);
+        EditText addEditText = findViewById(R.id.add_edittext);
+        addButton.setOnClickListener(v -> {
+            String newDevice = addEditText.getText().toString();
+            if (!newDevice.isEmpty()) {
+                customAdapter.addItem(newDevice);
+                addEditText.setText("");
+            }
         });
 
     }
