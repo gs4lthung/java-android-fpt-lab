@@ -24,6 +24,9 @@
         <activity
             android:name=".FoodOrderActivity"
             android:exported="true" />
+        <activity
+            android:name=".DrinkOrderActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
