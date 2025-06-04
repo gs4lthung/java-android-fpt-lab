@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/job_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Title:"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/job_title_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter job title"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/job_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description:" />
+
+        <EditText
+            android:id="@+id/job_description_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter job description"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="Delete"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
