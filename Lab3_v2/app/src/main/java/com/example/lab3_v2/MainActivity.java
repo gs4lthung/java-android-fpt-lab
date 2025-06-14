@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
-    String devices[] = {"Android", "IOS", "PHP", "Unity"};
+    String devices[] = {"Hà Nội", "Đà Lạt", "Vịnh Hạ Long", "Phú Quốc", "Nha Trang", "Hội An", "Huế", "Cần Thơ", "Đà Nẵng"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

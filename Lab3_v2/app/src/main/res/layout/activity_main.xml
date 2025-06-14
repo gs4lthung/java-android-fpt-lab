@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:background="#6d216d"
         android:padding="10dp"
-        android:text="List View"
+        android:text="Tourist View"
         android:textColor="#ffffff"
         android:textSize="30sp" />
 
@@ -18,15 +18,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
-        >
+        android:padding="10dp">
 
         <EditText
             android:id="@+id/add_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Enter device name"
+            android:hint="Enter tourist name"
             android:textSize="18sp" />
 
         <Button
