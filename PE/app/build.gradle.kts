@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lab9"
-    compileSdk = 36
+    namespace = "com.example.pe"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.lab9"
+        applicationId = "com.example.pe"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -37,9 +37,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation("androidx.work:work-runtime-ktx:2.9.0")
-    implementation("com.squareup.picasso:picasso:2.8")
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
